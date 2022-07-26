@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	background: #0062be;	
+	overflow: hidden;
+}
+
+ a{
+	text-decoration: none;
+	color: #fafafa;
+	font-family: 'Poppins' sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header ul{
+	position: relative;
+	display: flex;
+}
+
+header ul li{
+	list-style: none;
+}
+
+header ul li a{
+	display: inline-block;
+	color: #fafafa;
+	font-weight: 600;
+	margin-left: 40px;
+	text-decoration: none;
+}	
+
+span ion-icon{
+	font-size: 50px;
+	color: #fafafa;
+}
+
+a{
+	text-decoration: none;
+	color: #fafafa;
+}
+
+h1{
+	font-size: 30px;
+	margin-right: 650px;
+}
+
+/*Ajustando tamanho do seleteor que contem o formulário de login*/
+
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 180px;
+}
+
+main.container {
+    background: #fafafa;
+    padding: 3rem;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 8px;
+	min-height: 35vh;
+	min-width: 30vw;
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+main h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 2.5px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(to right,#55d7ff, #1d285a);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form .input-field {
+    position: relative;
+	
+}
+
+form .input-field:first-child{
+    margin-bottom: 4rem;
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #83bdf3, #58a8f3);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin:left;
+}
+
+
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7); 
+	border: none;
+	background: transparent;
+	width: 100%;
+	height: 20px;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+form #botao {
+    margin-top: 5rem;
+    background: #55d7ff;
+    cursor: pointer;
+    color: #fafafa;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: 3.2rem;
+	border: none;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;	
+}
+
+form #cadastro {
+	margin-top: 5rem;
+    background: #fafafa;
+    cursor: pointer;
+    color: #55d7ff;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: 0.5s;
+    height: 3.2rem;
+	border: 1px solid #55d7ff;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+form #cadastro:hover{
+    box-shadow: 0 0 0.40em currentColor, 0 0 0.55em currentColor;
+	color: #55d7ff;
+}
+
+form #botao:hover {
+    background: rgb(0, 153, 255);
+}
+
+.botoes{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}

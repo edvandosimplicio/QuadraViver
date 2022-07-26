@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #0062be;
+	transition: 0.5s;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header ul{
+	position: relative;
+	display: flex;
+}
+
+header ul li{
+	list-style: none;
+}
+
+header ul li a{
+	display: inline-block;
+	color: #fafafa;
+	font-weight: 600;
+	margin-left: 40px;
+	text-decoration: none;
+}	
+
+span ion-icon{
+	font-size: 50px;
+	color: #fafafa;
+}
+
+a{
+	text-decoration: none;
+	color: #fafafa;
+}
+
+h1{
+	font-size: 30px;
+	margin-right: 700px;
+}
+
+.content{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content button{
+	width: 200px;
+	padding: 10px;
+	background: #58a8f3;
+	border: none;
+	border-radius: 8px;
+	margin-top: 15px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.content button:hover{
+	background: #83bdf3;
+	box-shadow: 3px 2px 2px  #fafafa;
+}
+
+.content .textBox{
+	position: relative;
+	max-width: 400px;
+}
+
+.content .textBox h2{
+	color: #fafafa;
+	font-size: 2.5em;
+	line-height: 1.5em;
+	font-weight: 900;
+}
+
+.content .textBox h2 span{
+	font-size: 1.5em;
+}
+
+.content .textBox p {
+	color: #fafafa;
+	text-align: justify;
+}
+
+/* CSS PARA AS IMAGENS DO SLIDE */
+.slider{
+	width: 800px;
+	height: 500px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slides{
+	width: 500%;
+	height: 500px;
+	display: flex;
+}
+
+.slides input{
+	display: none;
+}
+
+.imgSlide{
+	width: 20%;
+	transition: 2s;
+}
+
+.imgSlide img{
+	width: 800px;
+	height: 500px;
+	
+}
+
+/* CSS PARA A NAVEGAÇÃO MANUAL */
+
+.navigation-manual{
+	position: absolute;
+	width: 800px;
+	margin-top: -40px;
+	display: flex;
+	justify-content: center;
+}
+
+.manual-btn{
+	border: 2px solid #fff;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+	margin-right: 40px;
+}
+
+.manual-btn:hover{
+	background: #fff;
+}
+
+#radio1:checked ~ .first{
+	margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+	margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+	margin-left: -43%;
+}
+
+#radio4:checked ~ .first{
+	margin-left: -64.7%;
+}
+
+/* CSS PARA NAVEGAÇÃO AUTOMÁTICA */
+
+.navigation-auto{
+	position:absolute;
+	display: flex;
+	width: 800px;
+	justify-content:center;
+	margin-top: 460px;
+}
+
+.navigation-auto div{
+	border: 2px solid #fff;
+	border-radius: 10px;
+	padding: 5px;
+	transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+	margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+	background: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+	background: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+	background: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+	background: #fff;
+}

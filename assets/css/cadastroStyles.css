@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	background: #0062be;	
+	overflow: hidden;
+}
+
+ a{
+	text-decoration: none;
+	color: #fafafa;
+	font-family: 'Poppins' sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header ul{
+	position: relative;
+	display: flex;
+}
+
+header ul li{
+	list-style: none;
+}
+
+header ul li a{
+	display: inline-block;
+	color: #fafafa;
+	font-weight: 600;
+	margin-left: 40px;
+	text-decoration: none;
+}	
+
+span ion-icon{
+	font-size: 50px;
+	color: #fafafa;
+}
+
+a{
+	text-decoration: none;
+	color: #fafafa;
+}
+
+h1{
+	font-size: 30px;
+	margin-right: 650px;
+}
+
+/* FORMULÁRIO */
+
+.center{
+    display: flex;
+    justify-content: center;  /*CENTRALIZAÇÃO DO FORMULÁRIO EM RELAÇÃO AO BODY*/
+    align-items: center;
+}
+
+.container{
+    background: #fafafa;
+    min-width: 35vw;
+    max-height: 92vh;
+    padding: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);            /*FORMATAÇÃO DO CONTAINER || POSIÇÕES*/
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+main h2{
+    font-weight: 600;
+    margin-bottom: 2rem;                /*FORMATAÇÃO DO TITULO H2*/
+    color: #0062be;
+}
+
+form{
+    display: flex;
+    flex-direction: column;   /*FORMATAÇÃO DO FORMULÁRIO PARA DEIXAR OS COMPONENTES UM ABAIXO DO OUTRO*/
+}
+form .input-field{
+    margin-bottom: 1rem;      /*ESPAÇAMENTO DOS INPUTS*/  
+	
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;                           /*LINHA DE BAIXO COM O EFEITO DE CORRER*/
+    bottom: 15px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 15px;                                            /*LINHA DE BAIXO COM O EFEITO DE CORRER*/
+    left: 0;
+    background: linear-gradient(to right, #83bdf3, #58a8f3);
+    transform: scaleX(0);
+    transition: all .5s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);                                   /*TRANSIÇÃO DO EFEITO*/
+}
+
+.input-field{
+    border: none;
+    position: relative;
+    display: flex;                                        /*RESETANDO FORMATAÇÃO DOS INPUTS PARA MELHOR MANIPULAÇÃO*/
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;                    /*FORMATAÇÃO E ESTILIZAÇÃO DOS INPUTS*/
+    color: rgba(0, 0, 0, 0.7);
+    background: transparent;
+    font-weight: 300;
+	border: none;
+}
+
+.input-field label{
+    color:#0062be;                     /*ESTILIZAÇÃO DO LABEL*/
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+
+}
+
+.input-field input::placeholder{
+    color: rgba(0, 0, 0, 0.5);          /*ESTILIZAÇÃO DO PLACEHOLDER*/
+    font-weight: 300;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;   
+    font-weight: 300;                     /*POSICIONAMENTO DOS BOTÕES*/
+    position: relative;                   
+    bottom: 1.5vh;
+    padding-top: 1vh;
+}
+
+.cadastro-btn{
+    margin-top: 2rem;
+    padding: 0.9vw 2vw;
+    background: linear-gradient(to left, #83bdf3, #58a8f3);      /*FORMATAÇÃO E EFEITOS DO BOTÃO CADASTRAR*/
+    cursor: pointer;
+    color: #fafafa;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    border-radius: 4px;
+	border: none;
+}
+
+.cadastro-btn:hover{
+    color: #fafafa;
+    background: linear-gradient(to right, #83bdf3, #58a8f3 );   /*EFEITO HOVER DO BOTÃO DE CADASTRO*/
+}
+
+.reset-btn {
+    margin-top: 2rem;
+    padding: 0.9vw 2vw;
+    background: #fafafa;
+    cursor: pointer;
+    color: #55d7ff;                           /*FORMATAÇÃO E EFEITOS DO BOTÃO REDEFINIR*/
+    font-size: 1rem;
+    font-weight: 300;
+    transition: all 0.4s;
+    border: solid 1px #55d7ff;
+    border-radius: 4px;
+}
+
+.reset-btn:hover{
+    color: #444bd6;  /*EFEITO HOVER DO BOTÃO DE REDEFINIR*/
+    box-shadow: 0 0 0.40em currentColor, 0 0 0.55em currentColor;
+	color: #55d7ff;
+}
+
+
+@media only screen and (max-width:1000px) {
+
+    .botoes{               
+        bottom: 80px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .reset-btn {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        width: 40vw;
+    }
+
+    .cadastro-btn{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        width: 40vw;
+    }
+
+    .input-field{
+        margin-bottom: 0.5rem;
+    }
+
+    .container{
+        min-width: 50vw;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+
+    .botoes{               
+        bottom: 80px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .reset-btn {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        width: 40vw;
+    }
+
+    .cadastro-btn{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        width: 40vw;
+    }
+
+    .input-field{
+        margin-bottom: 0.5rem;
+    }
+
+    .container{
+        min-width: 50vw;
+    }
+
+}
+
+@media only screen and (max-width:1200px) {
+
+    .botoes{               
+        bottom: 80px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .reset-btn {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        width: 45vw;
+    }
+
+    .cadastro-btn{
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        width: 45vw;
+    }
+
+    .input-field{
+        margin-bottom: 0.5rem;
+    }
+
+    .container{
+        min-width: 45vw;
+    }
+}
+/* FIM DO FORMULÁRIO*/
